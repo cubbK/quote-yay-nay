@@ -1,0 +1,25 @@
+{
+  "name": "quote-yay-nay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cubbK/quote-yay-nay.git",
+  "author": "cubbk <danpopa1998@gmail.com>",
+  "license": "MIT",
+  "watch": {
+    "offline": {
+      "patterns": [""],
+      "extensions": "yml",
+      "ignore": "node_modules",
+      "quiet": true
+    }
+  },
+  "scripts": {
+    "start": "npm-watch offline",
+    "offline": "serverless offline start"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.6.0",
+    "serverless-offline": "^4.9.4"
+  },
+  "dependencies": {}
+}
