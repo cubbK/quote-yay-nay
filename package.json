@@ -17,13 +17,16 @@
   },
   "scripts": {
     "start": "npm-watch offline",
-    "offline": "serverless offline start --port 3001"
+    "offline": "serverless offline start"
   },
   "devDependencies": {
     "npm-watch": "^0.6.0",
     "serverless-offline": "^4.9.4"
   },
   "dependencies": {
-    "aws-sdk": "^2.436.0"
+    "aws-sdk": "^2.436.0",
+    "serverless-dynamodb-client": "^0.0.2",
+    "serverless-dynamodb-local": "^0.2.37",
+    "uuid": "^3.3.2"
   }
 }

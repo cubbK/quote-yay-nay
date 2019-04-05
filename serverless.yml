@@ -14,6 +14,7 @@
 service: quote-yay-nay # NOTE: update this with your service name
 
 plugins:
+  - serverless-dynamodb-local
   - serverless-offline
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -75,6 +76,12 @@ functions:
       - http:
           path: hey/{id}
           method: get
+  quoteCreate:
+    handler: src/quote.create
+    events:
+      - http:
+          path: quote/create
+          method: post
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -125,18 +132,18 @@ functions:
 resources:
   Resources:
     QuotesDynamoDbTable:
-      Type: 'AWS:DynamoDB::Table'
+      Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
           -
             AttributeName: id
             AttributeType: S
-          KeySchema:
-            -
-              AttributeName: id
-              KeyType: HASH
-          ProvisionedThroughput:
-            ReadCapacityUnits: 1
-            WriteCapacityUnits: 1
-          TableName: 'quotes'
+        KeySchema:
+          -
+            AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: quotes
