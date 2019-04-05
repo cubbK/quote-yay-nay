@@ -13,13 +13,14 @@
 
 custom:
   dynamodb:
-  # If you only want to use DynamoDB Local in some stages, declare them here
+    # If you only want to use DynamoDB Local in some stages, declare them here
     stages:
       - dev
     start:
       port: 8000
       migrate: true
       seed: true
+      dbPath: "db/"
       convertEmptyValues: true
     # Uncomment only if you already have a DynamoDB running locally
     # noStart: true
@@ -145,16 +146,14 @@ functions:
 resources:
   Resources:
     QuotesDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
+      Type: "AWS::DynamoDB::Table"
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
