@@ -11,6 +11,19 @@
 #
 # Happy Coding!
 
+custom:
+  dynamodb:
+  # If you only want to use DynamoDB Local in some stages, declare them here
+    stages:
+      - dev
+    start:
+      port: 8000
+      migrate: true
+      seed: true
+      convertEmptyValues: true
+    # Uncomment only if you already have a DynamoDB running locally
+    # noStart: true
+
 service: quote-yay-nay # NOTE: update this with your service name
 
 plugins:
