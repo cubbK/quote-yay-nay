@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "aws-sdk": "^2.436.0",
+    "http-errors": "^1.7.2",
+    "middy": "^0.24.0",
     "serverless-dynamodb-client": "^0.0.2",
     "serverless-dynamodb-local": "^0.2.37",
     "uuid": "^3.3.2"

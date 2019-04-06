@@ -92,7 +92,7 @@ functions:
           path: hey/{id}
           method: get
   quoteCreate:
-    handler: src/quote.create
+    handler: src/quote/create.create
     events:
       - http:
           path: quote/create
