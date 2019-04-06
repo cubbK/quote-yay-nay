@@ -20,6 +20,7 @@ custom:
       port: 8000
       migrate: true
       seed: true
+      # The folder must be created before for this to work
       dbPath: "db/"
       convertEmptyValues: true
     # Uncomment only if you already have a DynamoDB running locally
