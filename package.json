@@ -24,9 +24,12 @@
     "serverless-offline": "^4.9.4"
   },
   "dependencies": {
+    "@keboola/middy-event-validator": "^1.0.0",
     "aws-sdk": "^2.436.0",
+    "handly": "^0.1.1",
     "http-errors": "^1.7.2",
-    "middy": "^0.24.0",
+    "joi": "^14.3.1",
+    "middy": "*",
     "serverless-dynamodb-client": "^0.0.2",
     "serverless-dynamodb-local": "^0.2.37",
     "uuid": "^3.3.2"

@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@keboola/middy-event-validator@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@keboola/middy-event-validator/-/middy-event-validator-1.0.0.tgz#c8f48769a9e3c2d73b754ce6d3546df9e62b03bc"
+  integrity sha512-TCw4hXHS/dC917EMEu2EEb63ANLV/LxhvGu3zsIU4fAFpds3zWWeV245kmdTT1Kcq8bkxwZ+0hjiIXcWw7XzbQ==
+  dependencies:
+    joi "^14.0.1"
+    lodash "^4.17.10"
+
 "@types/aws-lambda@^8.10.19":
   version "8.10.23"
   resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.23.tgz#ab90be8ee3d8796b35df0acef5d17d71c8928d97"
@@ -133,25 +141,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@^2.3.19, aws-sdk@^2.7.0:
+aws-sdk@^2.3.19, aws-sdk@^2.436.0, aws-sdk@^2.7.0:
   version "2.437.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.437.0.tgz#94e41a2ff112aa020ddbe4950dd5f73187889b8b"
   integrity sha512-sDZb5QBOO6FOMvuKDEdO16YQRk0WUhnQd38EaSt0yUCi4Gev8uypODyYONgODZcXe8Cr1GMwC8scUKr00S/I5w==
-  dependencies:
-    buffer "4.9.1"
-    events "1.1.1"
-    ieee754 "1.1.8"
-    jmespath "0.15.0"
-    querystring "0.2.0"
-    sax "1.2.1"
-    url "0.10.3"
-    uuid "3.3.2"
-    xml2js "0.4.19"
-
-aws-sdk@^2.436.0:
-  version "2.436.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.436.0.tgz#8882b823818cdb593cdc5540e6261ed7d7357be3"
-  integrity sha512-ncUefjtddjums7B4j8JGChwArc48is5SKFKxmf3UEixLvRW509SaiC+Di2NfO5YpUnYHGTbpcgCF+DFtxJXChA==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -789,6 +782,11 @@ h2o2@^6.1.0:
     joi "10.x.x"
     wreck "12.x.x"
 
+handly@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/handly/-/handly-0.1.1.tgz#7dd4fe6b07d32aa28d9c91e6c3d1891391c16ad3"
+  integrity sha512-DgFK7q1CGvHDmlqTkNE9CcYm7OWx+AEq780K3y1W7JbWxVf65jsGDI4LgO4CK2DcMLsSZ4n50i5euxJP/ecHYQ==
+
 hapi-cors-headers@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/hapi-cors-headers/-/hapi-cors-headers-1.0.3.tgz#856b0a9870f435249492c5a52d2744317a8cc1fd"
@@ -1200,6 +1198,15 @@ joi@12.x.x:
     isemail "3.x.x"
     topo "2.x.x"
 
+joi@^14.0.1, joi@^14.3.1:
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-14.3.1.tgz#164a262ec0b855466e0c35eea2a885ae8b6c703c"
+  integrity sha512-LQDdM+pkOrpAn4Lp+neNIFV3axv1Vna3j38bisbQhETPMANYRbFJFUyOZcOClYvM/hppMhGWuKSFEK9vjrB+bQ==
+  dependencies:
+    hoek "6.x.x"
+    isemail "3.x.x"
+    topo "3.x.x"
+
 js-string-escape@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/js-string-escape/-/js-string-escape-1.0.1.tgz#e2625badbc0d67c7533e9edc1068c587ae4137ef"
@@ -1324,7 +1331,7 @@ lodash.once@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
-lodash@^4.17.0:
+lodash@^4.17.0, lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -1380,7 +1387,7 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-middy@^0.24.0:
+middy@*:
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/middy/-/middy-0.24.0.tgz#0c24e00ee0531ffd554e4578ba34d681ca161e5d"
   integrity sha512-ZT0KijXFvHyodlUg4RmRVASO8Q8oQHigZObt8mDJ0/6+w67SZXutqccRfHHIb1LWBx4lCfP+jJMXOcNNyCEVzA==
@@ -1399,9 +1406,9 @@ middy@^0.24.0:
     querystring "^0.2.0"
 
 mime-db@1.x.x:
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.38.0.tgz#1a2aab16da9eb167b49c6e4df2d9c68d63d8e2ad"
-  integrity sha512-bqVioMFFzc2awcdJZIzR3HjZFX20QhilVS7hytkKrv7xFAn8bM1gzc/FOX2awLISvWe0PV8ptFKcon+wZ5qYkg==
+  version "1.39.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.39.0.tgz#f95a20275742f7d2ad0429acfe40f4233543780e"
+  integrity sha512-DTsrw/iWVvwHH+9Otxccdyy0Tgiil6TWK/xhfARJZF/QFhwOgZgOIvA2/VIGpM8U7Q8z5nDmdDWC6tuVMJNibw==
 
 mimos@3.x.x:
   version "3.0.3"
@@ -2260,6 +2267,13 @@ topo@2.x.x:
   integrity sha1-zVYVdSU5BXwNwEkaYhw7xvvh0YI=
   dependencies:
     hoek "4.x.x"
+
+topo@3.x.x:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/topo/-/topo-3.0.3.tgz#d5a67fb2e69307ebeeb08402ec2a2a6f5f7ad95c"
+  integrity sha512-IgpPtvD4kjrJ7CRA3ov2FhWQADwv+Tdqbsf1ZnPUSAtCJ9e1Z44MmoSGDXGk4IppoZA7jd/QRkNddlLJWlUZsQ==
+  dependencies:
+    hoek "6.x.x"
 
 touch@^3.1.0:
   version "3.1.0"
