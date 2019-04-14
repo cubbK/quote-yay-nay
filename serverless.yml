@@ -54,10 +54,10 @@ provider:
 
 functions:
   quoteCreate:
-    handler: src/quote.create
+    handler: src/quote.setQuoteOfTheDay
     events:
       - http:
-          path: quote/create
+          path: quote/quoteOfTheDay
           method: post
 
 
