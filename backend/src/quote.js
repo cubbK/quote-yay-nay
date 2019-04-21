@@ -48,8 +48,8 @@ async function setQuoteOfTheDay(event) {
   try {
     const request = await axios.get("https://favqs.com/api/qotd");
     const quote = request.data.quote;
-    console.log(quote)
     await createQuote(quote);
+    console.log("Added quote of the day")
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Successfully added the quote.", quote })
