@@ -1,9 +1,49 @@
-.example-card {
-  max-width: 600px;
-  margin:  0 auto;
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+  @media(max-width: 1110px) {
+    flex-direction: column;
+  }
 }
 
-.example-header-image {
+.container.quote-of-the-day {
+  flex-direction: column;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  color: rgba(66,66,66, 0.6)
+}
+
+.timeline {
+  width: 4px;
+  background-color: rgba(66,66,66, 1);
+  position: relative;
+  &::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -5.5px;
+    background-color: rgba(66,66,66, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.quote {
+  max-width: 600px;
+}
+
+.quote-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
