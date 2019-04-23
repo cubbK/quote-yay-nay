@@ -12,13 +12,31 @@
 
 .container.quote-of-the-day {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.padding {
+  height: 15px;
+  .quote {
+    width: 630px;
+  }
+  .timeline::after {
+    display: none;
+  }
 }
 
 .date {
   display: flex;
   align-items: center;
   font-size: 2.5rem;
-  color: rgba(66,66,66, 0.6)
+  justify-content: flex-end;
+  color: rgba(66,66,66, 0.6);
+  min-width: 205px;
+  &.today {
+    padding-bottom: 10px;
+    min-width: initial;
+  }
 }
 
 .timeline {
@@ -41,6 +59,7 @@
 
 .quote {
   max-width: 600px;
+  box-sizing: border-box;
 }
 
 .quote-image {

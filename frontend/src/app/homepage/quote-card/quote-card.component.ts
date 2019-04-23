@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-quote-card',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-card.component.scss']
 })
 export class QuoteCardComponent implements OnInit {
-
+  @Input() isQuoteOfTheDay: boolean;
   constructor() { }
 
   ngOnInit() {
