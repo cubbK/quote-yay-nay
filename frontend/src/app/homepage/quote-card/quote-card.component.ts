@@ -7,7 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class QuoteCardComponent implements OnInit {
   @Input() isQuoteOfTheDay: boolean;
+  voted = false;
+  voteOutcome: boolean;
   constructor() { }
+
+  vote(condition: boolean) {
+    this.voted = true;
+    this.voteOutcome = condition;
+  }
 
   ngOnInit() {
   }

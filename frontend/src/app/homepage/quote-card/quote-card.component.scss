@@ -5,6 +5,7 @@
   width: 1000px;
   margin: 0 auto;
   align-items: stretch;
+
   @media(max-width: 1110px) {
     flex-direction: column;
   }
@@ -17,10 +18,12 @@
 }
 
 .container.padding {
-  height: 15px;
+  height: 10px;
+
   .quote {
     width: 630px;
   }
+
   .timeline::after {
     display: none;
   }
@@ -31,8 +34,9 @@
   align-items: center;
   font-size: 2.5rem;
   justify-content: flex-end;
-  color: rgba(66,66,66, 0.6);
+  color: rgba(66, 66, 66, 0.6);
   min-width: 205px;
+
   &.today {
     padding-bottom: 10px;
     min-width: initial;
@@ -41,15 +45,16 @@
 
 .timeline {
   width: 4px;
-  background-color: rgba(66,66,66, 1);
+  background-color: rgba(66, 66, 66, 1);
   position: relative;
+
   &::after {
     content: "";
     width: 15px;
     height: 15px;
     border-radius: 50%;
     left: -5.5px;
-    background-color: rgba(66,66,66, 1);
+    background-color: rgba(66, 66, 66, 1);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -71,6 +76,7 @@
   margin-bottom: 0px !important;
   padding: 15px 0;
   display: flex;
+
   button {
     flex-grow: 1;
     margin: 0 10px;
@@ -79,4 +85,37 @@
 
 .quote-content {
   margin: 10px 0 20px;
+}
+
+.votes {
+  display: flex;
+  align-self: flex-start;
+  margin-left: auto;
+  color: #222;
+  padding: 1px 0;
+  border-radius: 10%;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px rgba(255,255,255,.2), 0 1px 1px 0 rgba(255,255,255,.14), 0 1px 3px 0 rgba(255,255,255,.12);
+}
+
+.vote-yes, .vote-no {
+  padding: 0 5px 0 2px;
+  display: flex;
+  align-items: center;
+  mat-icon {
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.vote-yes {
+  color: darken(#69f0ae, 20%);
+}
+
+.vote-no {
+  color: #f44336;
 }
