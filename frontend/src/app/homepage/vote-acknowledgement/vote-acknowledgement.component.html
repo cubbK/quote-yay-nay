@@ -1,0 +1,8 @@
+<div class="container">
+  <div>
+    Thanks for your vote. You voted:
+  </div>
+  <div [ngClass]="{ 'yes-vote': voteStatus, 'no-vote': !voteStatus }">
+    {{ voteStatus === true ? " Yes" : " No" }}
+  </div>
+</div>
