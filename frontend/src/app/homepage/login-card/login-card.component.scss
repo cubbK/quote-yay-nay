@@ -3,3 +3,9 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
 }
+
+.decorative-photo {
+  background-size: cover;
+  background-position: left center;
+  background-image: url('../../../assets/background-login-form.jpg');
+}

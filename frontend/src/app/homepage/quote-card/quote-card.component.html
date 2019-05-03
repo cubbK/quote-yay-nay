@@ -13,63 +13,7 @@
     </div>
     <div class="timeline" *ngIf="!isQuoteOfTheDay"></div>
     <mat-card class="quote">
-      <mat-card-header>
-        <div mat-card-avatar class="quote-image"></div>
-        <mat-card-title>Author</mat-card-title>
-        <mat-card-subtitle>tag1, tag2</mat-card-subtitle>
-        <div class="votes" *ngIf="!isQuoteOfTheDay || voted">
-          <div class="vote-yes">
-            5
-            <mat-icon>thumb_up</mat-icon>
-          </div>
-          <div class="vote-no">
-            4
-            <mat-icon>thumb_down</mat-icon>
-          </div>
-        </div>
-      </mat-card-header>
-      <mat-card-content class="quote-content">
-        <p>
-          "The Shiba Inu is the smallest of the six original and distinct spitz
-          breeds of dog from Japan. A small, agile dog that copes very well with
-          mountainous terrain, the Shiba Inu was originally bred for hunting."
-        </p>
-      </mat-card-content>
-      <div *ngIf="isQuoteOfTheDay">
-        Do you think this quote deserves to be the quote of the day?
-      </div>
-      <mat-card-actions class="action-container" *ngIf="isQuoteOfTheDay">
-        <button
-          *ngIf="!voted || voteOutcome == false"
-          mat-stroked-button
-          color="accent"
-          (click)="vote(true)"
-        >
-          YES
-        </button>
-        <button
-          *ngIf="voted && voteOutcome == true"
-          mat-raised-button
-          color="accent"
-        >
-          YES
-        </button>
-        <button
-          *ngIf="!voted || voteOutcome == true"
-          mat-stroked-button
-          color="warn"
-          (click)="vote(false)"
-        >
-          NO
-        </button>
-        <button
-          *ngIf="voted && voteOutcome == false"
-          mat-raised-button
-          color="warn"
-        >
-          NO
-        </button>
-      </mat-card-actions>
+
     </mat-card>
   </div>
   <div class="container padding" *ngIf="!isQuoteOfTheDay">
