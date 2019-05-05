@@ -1,0 +1,24 @@
+:host {
+  height: 100%;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+mat-icon {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+button.approval {
+  color: #00FFA6;
+}
+button.disapproval {
+  color: #FF0057;
+
+}

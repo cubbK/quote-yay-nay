@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700');
 :host {
   background: #fff;
-  padding: 25px 20px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 0.7fr;
+  max-width: 600px;
+}
+
+.main-part {
+  padding: 25px 0px 25px 20px;
+}
+
+.second-part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 50px 0;
+  &>* {
+    flex: 1;
+  }
 }
