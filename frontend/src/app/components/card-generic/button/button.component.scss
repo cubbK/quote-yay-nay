@@ -2,12 +2,22 @@
   height: 100%;
 }
 
+// :host ::ng-deep .mat-button-wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
 button {
   width: 100%;
   height: 100%;
   border-radius: 0;
   font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  position: relative;
 }
+
+
 
 mat-icon {
   font-size: 3rem;
@@ -17,8 +27,23 @@ mat-icon {
 
 button.approval {
   color: #00FFA6;
+  .number-voted {
+    top: -30px;
+  }
 }
+
 button.disapproval {
   color: #FF0057;
+  .number-voted {
+    bottom: -30px;
+  }
+}
 
+.number-voted {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

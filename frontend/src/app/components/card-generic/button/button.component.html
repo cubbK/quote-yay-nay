@@ -1,3 +1,5 @@
 <button mat-flat-button [ngClass]="color">
+  <div *ngIf="showUpperNumber && voted" class="number-voted">{{ numberOfVoters }}</div>
   <mat-icon><ng-content></ng-content></mat-icon>
+  <div *ngIf="showBottomNumber && voted" class="number-voted">{{ numberOfVoters }}</div>
 </button>
