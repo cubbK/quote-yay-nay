@@ -13,7 +13,7 @@ enum Colors {
 export class ButtonComponent implements OnInit {
   @Input() color: Colors;
   @Input() numberOfVoters: number = null;
-  @Input() voted = false;
+  @Input() voted: boolean;
 
   showUpperNumber: boolean;
   showBottomNumber: boolean;
@@ -23,5 +23,4 @@ export class ButtonComponent implements OnInit {
     this.showUpperNumber = this.color === Colors.approval;
     this.showBottomNumber = this.color === Colors.disapproval;
   }
-
 }

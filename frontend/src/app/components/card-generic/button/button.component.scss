@@ -27,6 +27,7 @@ mat-icon {
 
 button.approval {
   color: #00FFA6;
+
   .number-voted {
     top: -30px;
   }
@@ -34,9 +35,16 @@ button.approval {
 
 button.disapproval {
   color: #FF0057;
+
   .number-voted {
     bottom: -30px;
   }
+}
+
+button.selected {
+  font-size: 3.8rem;
+  width: 3.8rem;
+  height: 3.8rem;
 }
 
 .number-voted {
