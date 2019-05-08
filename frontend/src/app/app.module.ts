@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageModule } from './homepage/homepage.module';
 import { MaterialModule } from './material.module';
+import { MobxAngularModule } from 'mobx-angular';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MaterialModule } from './material.module';
     BrowserAnimationsModule,
     MaterialModule,
     HomepageModule,
+    MobxAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
