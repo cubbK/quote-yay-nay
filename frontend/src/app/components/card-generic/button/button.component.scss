@@ -25,20 +25,28 @@ mat-icon {
   height: 3rem;
 }
 
-button.approval {
-  color: #00FFA6;
-
+button.top {
   .number-voted {
     top: -30px;
   }
 }
 
-button.disapproval {
-  color: #FF0057;
-
+button.bottom {
   .number-voted {
     bottom: -30px;
   }
+}
+
+button.approval {
+  color: #00FFA6;
+
+
+}
+
+button.disapproval {
+  color: #FF0057;
+
+
 }
 
 button.selected {

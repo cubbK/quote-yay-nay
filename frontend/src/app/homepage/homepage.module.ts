@@ -7,13 +7,16 @@ import { MatCardModule } from '@angular/material';
 import { LoginCardComponent } from './login-card/login-card.component';
 import { VoteAcknowledgementComponent } from './vote-acknowledgement/vote-acknowledgement.component';
 import { CardGenericModule } from '../components/card-generic/card-generic.module';
-
+import { CurrentQuoteStore } from '../stores/currentQuote.store';
+import { MobxAngularModule } from 'mobx-angular';
 @NgModule({
   declarations: [HomepageComponent, QuoteCardComponent, LoginCardComponent, VoteAcknowledgementComponent],
   imports: [
     CommonModule,
     MaterialModule,
-    CardGenericModule
-  ]
+    CardGenericModule,
+    MobxAngularModule
+  ],
+  providers: [CurrentQuoteStore],
 })
 export class HomepageModule { }

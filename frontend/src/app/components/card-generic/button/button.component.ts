@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatButton } from '@angular/material';
 
 enum Colors {
   approval = 'approval',
@@ -10,17 +11,13 @@ enum Colors {
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
-  @Input() color: Colors;
+export class ButtonComponent extends MatButton {
+  // @Input() color: Colors;
   @Input() numberOfVoters: number = null;
   @Input() voted: boolean;
+  @Input() isActive: boolean;
+  @Input() votersPosition: string;
 
-  showUpperNumber: boolean;
-  showBottomNumber: boolean;
-  constructor() { }
-
-  ngOnInit() {
-    this.showUpperNumber = this.color === Colors.approval;
-    this.showBottomNumber = this.color === Colors.disapproval;
-  }
+  // showUpperNumber = this.color === Colors.approval;
+  // showBottomNumber = this.color === Colors.disapproval;
 }

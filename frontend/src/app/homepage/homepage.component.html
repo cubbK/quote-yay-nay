@@ -1,14 +1,33 @@
-<div>
+<div *mobxAutorun>
   <div class="quote-of-the-day-container">
     <app-card-generic>
-      <app-card-generic-icon ></app-card-generic-icon>
+      <app-card-generic-icon></app-card-generic-icon>
       <app-card-generic-content>
         Be who you are and say what you feel, because those who mind don't
         matter, and those who matter don't mind.
+        VoteState: {{ currentQuote.voteState }}
+        Voted {{currentQuote.voted}}
       </app-card-generic-content>
       <app-card-generic-title>Maya Halin</app-card-generic-title>
-      <app-card-generic-button color="approval" numberOfVoters="12">thumb_up_outlined</app-card-generic-button>
-      <app-card-generic-button color="disapproval" numberOfVoters="5">thumb_down_outlined</app-card-generic-button>
+      <app-card-generic-button
+        (click)="currentQuote.setVoteState(true)"
+        color="approval"
+        numberOfVoters="12"
+        votersPosition="top"
+        [isActive]="currentQuote.voteState === true ? true : false"
+        [voted]="currentQuote.voted">
+        thumb_up_outlined
+      </app-card-generic-button>
+      <app-card-generic-button
+        (click)="currentQuote.setVoteState(false)"
+        color="disapproval"
+        numberOfVoters="5"
+        votersPosition="bottom"
+        [isActive]="currentQuote.voteState === false ? true : false"
+        [voted]="currentQuote.voted"
+      >
+        thumb_down_outlined
+      </app-card-generic-button>
     </app-card-generic>
   </div>
   <app-vote-acknowledgement></app-vote-acknowledgement>
