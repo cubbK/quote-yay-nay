@@ -10,7 +10,9 @@
   <div *ngIf="voted && votersPosition === 'top'" class="number-voted">
     {{ numberOfVoters }}
   </div>
-  <mat-icon><ng-content></ng-content></mat-icon>
+  <div class="mat-icon-container">
+    <mat-icon><ng-content></ng-content></mat-icon>
+  </div>
   <div *ngIf="voted && votersPosition === 'bottom'" class="number-voted">
     {{ numberOfVoters }}
   </div>

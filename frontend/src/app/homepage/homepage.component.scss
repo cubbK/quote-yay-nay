@@ -1,6 +1,7 @@
-.quote-of-the-day-container {
-  min-height: calc(100vh - 64px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
+  // width: 1000px;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+
 }
+
