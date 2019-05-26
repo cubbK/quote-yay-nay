@@ -1,7 +1,56 @@
 .container {
-  // width: 1000px;
+  width: 1300px;
   display: grid;
   grid-template-columns: 4fr 6fr;
+  margin: 0 auto;
+  grid-column-gap: 20px;
+  @media(max-width: 1400px) {
+    width: auto;
+    padding: 0 2%;
+  }
+}
+.quote-of-the-day-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  app-card-generic {
+    max-width: 600px;
+  }
+}
 
+.title {
+  position: relative;
+  font-size: 3rem;
+  margin: 70px 0 0 0;
+  .trendy-line {
+    $topOffset: 10px;
+    position: absolute;
+    top: calc(#{$topOffset} + 0px);
+    right: 0;
+    width: 4px;
+    height: 25px;
+    background-color: #0002fd;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 4px;
+      height: 8px;
+      background-color: #0002fd;
+    }
+    &::before {
+      top: calc(#{$topOffset} + 28px);
+    }
+    &::after {
+      top: calc(#{$topOffset} + 44px);
+    }
+  }
+}
+
+.subtitle {
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 20px 0;
 }
 
