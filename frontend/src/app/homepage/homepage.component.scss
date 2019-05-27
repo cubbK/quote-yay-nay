@@ -8,13 +8,14 @@
     "quotes-list quotes-list";
   margin: 0 auto;
   grid-column-gap: 20px;
+
   @media(max-width: 990px) {
     grid-template-columns: auto;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-    "description"
-    "main-quote"
-    "quotes-list";
+      "description"
+      "main-quote"
+      "quotes-list";
   }
 }
 
@@ -29,9 +30,11 @@
   }
 
   padding-right: 5vw;
+
   @media(max-width: 1100px) {
     padding-right: 2vw;
   }
+
   @media(max-width: 990px) {
     padding-right: 15px;
     padding-left: 15px;
@@ -41,9 +44,11 @@
 .description-container {
   grid-area: description;
   padding-left: 5vw;
+
   @media(max-width: 1100px) {
     padding-left: 2vw;
   }
+
   @media(max-width: 990px) {
     padding-left: 20px;
     padding-right: 20px;
@@ -100,6 +105,16 @@
   background-size: contain;
   background-position: center center;
   background-repeat: repeat;
+}
+
+.past-quotes-paper {
+  margin: 0 auto;
+  width: 900px;
+  padding: 0 10%;
+  box-sizing: border-box;
+  mat-divider {
+    border-top-width: 15px;
+  }
 }
 
 .action-button {
