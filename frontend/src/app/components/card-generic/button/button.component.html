@@ -1,5 +1,6 @@
 <button
   mat-flat-button
+  [disabled]="isActive"
   [ngClass]="{
     top: votersPosition === 'top',
     bottom: votersPosition === 'bottom',

@@ -44,15 +44,14 @@ button.bottom {
 }
 
 button.approval {
-  color: #00FFA6;
-
+  color: #00FFA6 !important;
+  background-color: transparent !important;
 
 }
 
 button.disapproval {
-  color: #FF0057;
-
-
+  color: #FF0057 !important;
+  background-color: transparent !important;
 }
 
 button.selected {
