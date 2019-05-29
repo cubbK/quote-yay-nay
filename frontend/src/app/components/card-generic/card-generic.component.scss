@@ -3,11 +3,17 @@
   background: #fff;
   display: grid;
   grid-template-columns: 1fr 100px;
-
+  @media(max-width: 500px) {
+    grid-template-columns: auto;
+  }
 }
 
 .main-part {
   padding: 25px 0px 25px 20px;
+  @media(max-width: 500px) {
+    text-align: center;
+    padding: 25px 20px;
+  }
 }
 
 .second-part {
@@ -17,5 +23,10 @@
   padding: 50px 0;
   &>* {
     flex: 1;
+  }
+  @media(max-width: 500px) {
+    padding: 15px 0 0 0;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

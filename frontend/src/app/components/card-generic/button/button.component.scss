@@ -40,6 +40,10 @@ button.top {
 button.bottom {
   .number-voted {
     bottom: -30px;
+    @media(max-width: 500px) {
+      top: -30px;
+      bottom: auto;
+    }
   }
 }
 

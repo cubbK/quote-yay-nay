@@ -2,19 +2,21 @@
   height: 100%;
   display: grid;
   grid-template-columns: 4fr 6fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
     "description main-quote"
+    "quotes-list-title quotes-list-title"
     "quotes-list quotes-list";
   margin: 0 auto;
   grid-column-gap: 20px;
 
   @media(max-width: 990px) {
     grid-template-columns: auto;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
       "description"
       "main-quote"
+      "quotes-list-title"
       "quotes-list";
   }
 }
@@ -24,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   app-card-generic {
     max-width: 600px;
@@ -36,8 +39,22 @@
   }
 
   @media(max-width: 990px) {
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: 800px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.quote-of-the-day-divider {
+  height: 40px;
+  width: 100vw;
+  background-image: url("../../assets/pattern.png");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: contain;
+  @media(min-width: 990px) {
+    display: none;
   }
 }
 
@@ -50,10 +67,10 @@
   }
 
   @media(max-width: 990px) {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 800px;
+    padding-left: 4%;
+    padding-right: 4%;
     justify-self: center;
+    text-align: center;
   }
 }
 
@@ -88,6 +105,14 @@
     &::after {
       top: calc(#{$topOffset} + 44px);
     }
+    @media(max-width: 990px) {
+      opacity: 0;
+    }
+  }
+
+  @media(max-width: 700px) {
+    font-size: 2.5rem;
+    margin: 30px 0 0 0;
   }
 }
 
@@ -98,8 +123,17 @@
   margin: 20px 0;
 }
 
+.past-quotes-title {
+  grid-area: quotes-list-title;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 15px 30px;
+  min-height: 120px;
+}
+
 .past-quotes-container {
-  margin-top: 100px;
   grid-area: quotes-list;
   background: url("../../assets/pattern.png");
   background-size: contain;
@@ -114,6 +148,16 @@
   box-sizing: border-box;
   mat-divider {
     border-top-width: 15px;
+  }
+  @media(max-width: 1000px) {
+    width: auto;
+    padding: 0 5%;
+  }
+  @media(max-width: 700px) {
+    padding: 0 10px;
+    mat-divider {
+      border-top-width: 10px;
+    }
   }
 }
 
