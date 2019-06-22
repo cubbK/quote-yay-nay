@@ -1,0 +1,19 @@
+type User {
+  google: String!
+  votedQuotes: [Quote!] @relation
+}
+
+type Quote {
+  date: String!
+  content: String!
+  author: String!
+  numberOfUpVotes: Int!
+  numberOfDownVotes: Int!
+  completed: Boolean!
+  users: [User!] @relation
+}
+
+type Query {
+  allQuotes: [Quote!]
+  quotesByCompletedFlag(completed: Boolean!): [Quote!]
+}
