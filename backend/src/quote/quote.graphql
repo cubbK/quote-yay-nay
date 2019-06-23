@@ -9,6 +9,6 @@ type Quote {
 }
 
 type Query {
-  allQuotes : [Quote!]!
+  quotes(first: Int, offset: Int) : [Quote!]!
   quote(id: Int!) : Quote
 }

@@ -6,8 +6,7 @@
 
 /* tslint:disable */
 export interface IQuery {
-    allQuotes(): Quote[] | Promise<Quote[]>;
-    quotesByCompletedFlag(completed: boolean): Quote[] | Promise<Quote[]>;
+    quotes(first?: number, offset?: number): Quote[] | Promise<Quote[]>;
     quote(id: number): Quote | Promise<Quote>;
     user(id: number): User | Promise<User>;
 }

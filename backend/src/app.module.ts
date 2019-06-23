@@ -9,12 +9,9 @@ import { UserResolver } from './user/user.resolver';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      typePaths: ['./**/*.graphql'],
-      typeDefs: [`
-   directive @relation on FIELD_DEFINITION
-`],
+      typePaths: [join(process.cwd(), 'src/**/*.graphql')],
       definitions: {
-        path: join(process.cwd(), 'src/graphql.ts'),
+        path: join(process.cwd(), 'src/graphql.schema.ts'),
       },
     }),
   ],

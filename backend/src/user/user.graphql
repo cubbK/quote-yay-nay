@@ -1,6 +1,6 @@
 type User {
   google: String!
-  votedQuotes: [Quote!]! @relation
+  votedQuotes: [Quote!]!
 }
 
 type Query {
