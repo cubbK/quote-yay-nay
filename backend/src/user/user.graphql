@@ -1,0 +1,8 @@
+type User {
+  google: String!
+  votedQuotes: [Quote!]! @relation
+}
+
+type Query {
+  user(id: Int!) : User
+}

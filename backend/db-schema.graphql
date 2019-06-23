@@ -1,7 +1,7 @@
     
 type User {
   google: String!
-  votedQuotes: [Quote!] @relation
+  votedQuotes: [Quote!]! @relation
 }
 
 type Quote {
@@ -11,10 +11,10 @@ type Quote {
   numberOfUpVotes: Int!
   numberOfDownVotes: Int!
   completed: Boolean!
-  users: [User!] @relation
+  users: [User!]! @relation
 }
 
 type Query {
-  allQuotes: [Quote!]
-  quotesByCompletedFlag(completed: Boolean!): [Quote!]
+  allQuotes: [Quote!]!
+  quotesByCompletedFlag(completed: Boolean!): [Quote!]!
 }

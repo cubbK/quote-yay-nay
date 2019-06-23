@@ -1,0 +1,14 @@
+type Quote {
+  date: String!
+  content: String!
+  author: String!
+  numberOfUpVotes: Int!
+  numberOfDownVotes: Int!
+  completed: Boolean!
+  users: [User!]!
+}
+
+type Query {
+  allQuotes : [Quote!]!
+  quote(id: Int!) : Quote
+}
