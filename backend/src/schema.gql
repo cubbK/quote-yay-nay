@@ -1,3 +1,4 @@
+    
 type User {
   google: String!
   votedQuotes: [Quote!] @relation
