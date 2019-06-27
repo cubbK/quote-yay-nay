@@ -1,0 +1,32 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: quotes
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    # env_file:
+    #   - ./db/.env
+    volumes:
+      - db_data:/var/lib/mysql/data
+  # backend:
+  #   build: ./backend
+  #   restart: always
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "3000:3000"
+  #   env_file:
+  #     - ./server/.env
+  # frontend:
+  #   build: ./frontend
+  #   restart: always
+  #   # depends_on:
+  #   #   - backend
+  #   ports:
+  #     - "4200:4200"
+volumes:                         
+  db_data:
