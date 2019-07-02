@@ -5,6 +5,10 @@
  */
 
 /* tslint:disable */
+export interface IMutation {
+    createQuote(author: string, content: string): Quote | Promise<Quote>;
+}
+
 export interface IQuery {
     quotes(first?: number, offset?: number): Quote[] | Promise<Quote[]>;
     quote(id: number): Quote | Promise<Quote>;

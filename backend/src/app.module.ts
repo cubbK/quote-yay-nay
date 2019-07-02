@@ -2,9 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
-import { QuoteResolver } from './quote/quote.resolver';
-import { UserResolver } from './user/user.resolver';
-import { QuoteService } from './quote/quote.service';
+import { QuoteModule } from './quote/quote.module';
 
 @Module({
   imports: [
@@ -24,7 +22,7 @@ import { QuoteService } from './quote/quote.service';
         path: join(process.cwd(), 'src/graphql.schema.ts'),
       },
     }),
+    QuoteModule,
   ],
-  providers: [ QuoteResolver, UserResolver, QuoteService],
 })
 export class AppModule { }

@@ -12,3 +12,7 @@ type Query {
   quotes(first: Int, offset: Int) : [Quote!]!
   quote(id: Int!) : Quote
 }
+
+type Mutation {
+  createQuote(author: String!, content: String!): Quote!
+}
