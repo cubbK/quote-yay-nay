@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: quotes
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql/data
+  backend:
+    command: yarn start:dev:docker
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+  frontend:
+    command: yarn start:docker
+    volumes:
+      - ./frontend:/app    
+      - /app/node_modules/
+volumes:                         
+  db_data:
