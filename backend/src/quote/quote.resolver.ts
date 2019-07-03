@@ -7,7 +7,8 @@ export class QuoteResolver {
 
   @Query('quote')
   async getQuoteById(@Args('id') id: number) {
-    return this.quoteService.getQuoteById(id)
+    const quote = await this.quoteService.getQuoteById(id);
+    return { id: 1, author: 'hey'};
   }
 
   @Mutation()

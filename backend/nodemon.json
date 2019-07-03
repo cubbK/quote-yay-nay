@@ -4,7 +4,7 @@
   "ignore": ["src/**/*.spec.ts"],
   "exec": "ts-node -r tsconfig-paths/register src/main.ts",
   "events": {
-    "restart": "kill $(lsof -t -i:4001)",
-    "crash": "kill $(lsof -t -i:4001)"
+    "restart": "kill $(lsof -t -i:3000)",
+    "crash": "kill $(lsof -t -i:3000)"
   }
 }

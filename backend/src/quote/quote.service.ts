@@ -11,10 +11,9 @@ export class QuoteService {
     @InjectRepository(Quote)
     private readonly quoteRepository: Repository<Quote>
   ) { }
-  getQuoteById(id: number) {
-    return {
-      author: 'hey1',
-    };
+
+  async getQuoteById(id: number) {
+    return await this.quoteRepository.findOne(id);
   }
 
   async createQuote(props: CreateQuoteDto) {
