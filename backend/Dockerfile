@@ -1,7 +1,7 @@
 FROM node:11.13.0
 
 # Create app directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # To make nodemon work we kill the service on port 4001 everytime there is a change
 # See config in nodemon.json

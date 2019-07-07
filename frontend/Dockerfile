@@ -1,5 +1,5 @@
 FROM node:11.13.0
-WORKDIR /app
+WORKDIR /usr/src/app
 
 RUN npm install -g yarn
 

@@ -11,15 +11,16 @@ services:
     volumes:
       - db_data:/var/lib/mysql/data
   backend:
-    command: yarn start:dev:docker
     volumes:
-      - ./backend:/app
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
     depends_on:
       - db
+    command: yarn start:dev:docker
   frontend:
     command: yarn start:docker
     volumes:
-      - ./frontend:/app    
-      - /app/node_modules/
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
 volumes:                         
   db_data:
