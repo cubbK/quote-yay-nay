@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToMany, JoinTable } from 'typeorm';
+import { User } from 'src/user/user.entity';
 
 @Entity()
 export class Quote {
@@ -23,4 +24,8 @@ export class Quote {
 
   @Column()
   completed: boolean;
+
+  @ManyToMany(type => User, user => user.quotes)
+  @JoinTable()
+  users: User[];
 }

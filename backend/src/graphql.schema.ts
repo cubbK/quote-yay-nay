@@ -10,7 +10,7 @@ export interface IMutation {
 }
 
 export interface IQuery {
-    quotes(first?: number, offset?: number): Quote[] | Promise<Quote[]>;
+    quotes(skip?: number, take?: number): Quote[] | Promise<Quote[]>;
     quote(id: number): Quote | Promise<Quote>;
     user(id: number): User | Promise<User>;
 }

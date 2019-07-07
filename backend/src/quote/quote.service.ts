@@ -25,8 +25,21 @@ export class QuoteService {
     quote.completed = false;
     quote.numberOfDownVotes = 0;
     quote.numberOfUpVotes = 0;
+    quote.users = [];
 
     return await this.quoteRepository.save(quote);
+  }
+
+  getQuotes(props) {
+    const { take, skip } = props;
+    return this.quoteRepository.find({
+      skip,
+      take,
+    });
+  }
+
+  findUsers(props) {
+    console.log(props)
   }
 
 }
