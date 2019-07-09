@@ -3,6 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { QuoteModule } from './quote/quote.module';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/users.module';
 
 @Module({
   imports: [
@@ -23,6 +25,8 @@ import { QuoteModule } from './quote/quote.module';
       },
     }),
     QuoteModule,
+    UserModule,
+    AuthModule,
   ],
 })
 export class AppModule { }
