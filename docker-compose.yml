@@ -1,6 +1,11 @@
-version: "3"
+version: "3.7"
 services:
   backend:
+    environment:
+      - FRONTEND_URL=
+      - BACKEND_URL=
+    env_file:
+    - secrets.env
     build: ./backend
     restart: "no"
     ports:

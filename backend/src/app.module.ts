@@ -24,8 +24,8 @@ import { UserModule } from './user/users.module';
         path: join(process.cwd(), 'src/graphql.schema.ts'),
       },
     }),
-    QuoteModule,
     UserModule,
+    QuoteModule,
     AuthModule,
   ],
 })

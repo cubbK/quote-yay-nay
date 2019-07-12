@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 services:
   db:
     image: mariadb
@@ -11,6 +11,9 @@ services:
     volumes:
       - db_data:/var/lib/mysql/data
   backend:
+    environment:
+      - FRONTEND_URL=http://localhost:4200
+      - BACKEND_URL=http://backend:3000
     volumes:
       - ./backend:/usr/src/app
       - /usr/src/app/node_modules
